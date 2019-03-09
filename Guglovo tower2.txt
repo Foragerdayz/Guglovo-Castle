@@ -1,0 +1,78 @@
+//Spawn helper function
+void SpawnObject( string type, vector position, vector orientation )
+{
+    auto obj = GetGame().CreateObject( type, position );
+    obj.SetPosition( position );
+    obj.SetOrientation( orientation );
+    //Force collision update
+    vector roll = obj.GetOrientation();
+    roll [ 2 ] = roll [ 2 ] - 1;
+    obj.SetOrientation( roll );
+    roll [ 2 ] = roll [ 2 ] + 1;
+    obj.SetOrientation( roll );
+}
+
+//Your custom spawned objects
+SpawnObject("bldr_rock_bright_monolith1", "8430.438477 363.924500 6537.645996", "0.000000 0.000000 -179.999985");
+SpawnObject("bldr_rock_bright_monolith2", "8423.006836 360.437988 6537.813477", "0.000000 -83.000015 0.000000");
+SpawnObject("bldr_rock_bright_monolith3", "8418.486328 360.635101 6541.218750", "-62.999996 0.000000 0.000000");
+SpawnObject("bldr_rock_bright_spike2", "8425.965820 363.722076 6533.431641", "0.000000 0.000000 0.000000");
+SpawnObject("bldr_Platform2_Stairs_30", "8416.823242 360.707001 6549.441406", "-179.999985 0.000000 0.000000");
+SpawnObject("bldr_Platform2_Stairs_30", "8418.136719 364.214355 6543.114746", "147.000031 -2.000000 0.000000");
+SpawnObject("bldr_Platform2_Stairs_30", "8421.622070 367.679474 6536.987793", "158.000031 0.000000 0.000000");
+SpawnObject("bldr_Platform2_Stairs_30", "8424.184570 370.735199 6532.650391", "138.999985 0.000000 0.000000");
+SpawnObject("bldr_Platform2_Stairs_30_WallR", "8424.234375 371.195831 6530.978027", "139.000000 0.000000 0.000000");
+SpawnObject("bldr_Platform2_Stairs_30_WallR", "8420.271484 367.812469 6537.069824", "155.000031 0.000000 0.000000");
+SpawnObject("bldr_Platform2_Stairs_30_WallR", "8417.063477 364.408966 6543.228516", "149.000031 0.000000 0.000000");
+SpawnObject("bldr_Platform2_Stairs_30_WallR", "8415.753906 361.149628 6548.237305", "-179.999985 0.000000 0.000000");
+SpawnObject("bldr_rock_bright_spike1", "8427.065430 365.957947 6548.467285", "-6.000000 0.000000 0.000000");
+SpawnObject("bldr_rock_bright_monolith3", "8418.686523 361.236084 6539.018066", "-34.000008 -23.999996 -71.000038");
+SpawnObject("bldr_wall_indcnch_5", "8431.626953 372.817474 6529.343262", "12.000008 0.000000 0.000000");
+SpawnObject("bldr_rock_bright_monolith1", "8434.285156 364.298615 6540.303223", "0.000000 0.000000 -4.000000");
+SpawnObject("bldr_rock_bright_monolith2", "8432.336914 368.266815 6529.379395", "51.000008 -9.000000 -179.999985");
+SpawnObject("bldr_Platform2_Stairs_30", "8429.589844 374.555420 6528.859863", "90.000000 0.000000 0.000000");
+SpawnObject("bldr_Platform2_Stairs_30", "8435.778320 378.137299 6528.824219", "91.000015 0.000000 0.000000");
+SpawnObject("bldr_Platform2_Stairs_30", "8438.643555 384.700073 6540.729492", "-88.999985 0.000000 0.000000");
+SpawnObject("bldr_Platform2_Stairs_30", "8442.226563 381.713623 6533.040527", "0.000000 0.000000 0.000000");
+SpawnObject("bldr_wall_indcnch_5", "8433.526367 391.267639 6535.367676", "0.000000 0.000000 0.000000");
+SpawnObject("bldr_wall_indcnc_4", "8441.582031 380.326843 6530.745605", "90.000038 -90.000000 -0.000009");
+SpawnObject("bldr_wall_indcnc_4", "8440.153320 383.852722 6539.615723", "179.999985 90.000000 179.999985");
+SpawnObject("bldr_rock_wallv", "8442.725586 349.900024 6523.437500", "0.000000 0.000000 0.000000");
+SpawnObject("bldr_rock_wallh3", "8443.067383 373.473694 6526.124023", "-89.000000 0.000000 -21.000008");
+SpawnObject("bldr_rock_bright_wallh3", "8439.592773 370.666595 6542.198242", "3.000020 11.000000 98.000038");
+SpawnObject("bldr_rock_bright_spike3", "8440.833008 368.459869 6540.804199", "0.000000 0.000000 -178.999969");
+SpawnObject("bldr_rock_bright_monolith2", "8446.995117 360.002167 6545.725586", "98.000015 1.000000 0.000000");
+SpawnObject("bldr_wall_indcnc_4", "8440.209961 382.722168 6541.353027", "-179.999985 0.000000 0.000000");
+SpawnObject("bldr_wall_indcnc_4", "8443.140625 382.717010 6538.326172", "-91.000015 1.000000 0.000000");
+SpawnObject("bldr_rock_monolith4", "8435.498047 379.836487 6537.684570", "0.000000 0.000000 -93.000031");
+SpawnObject("bldr_rock_monolith4", "8444.258789 377.801788 6530.379395", "0.000000 0.000000 0.000000");
+SpawnObject("bldr_plnt_b_sambucusNigra_1s", "8443.154297 379.639404 6537.153320", "0.000000 0.000000 0.000000");
+SpawnObject("bldr_plnt_b_rosaCanina_2s", "8443.581055 379.986938 6534.937012", "0.000000 0.000000 0.000000");
+SpawnObject("bldr_plnt_t_FraxinusExcelsior_2w", "8427.557617 372.903137 6555.756348", "-3.000009 -21.000000 -2.000000");
+SpawnObject("bldr_plnt_t_quercusRobur_1fb", "8438.560547 375.536652 6547.274414", "-2.000000 -9.000000 -1.000000");
+SpawnObject("bldr_plnt_b_crataegusLaevigata_2s", "8435.991211 376.142731 6546.614258", "0.000000 0.000000 0.000000");
+SpawnObject("bldr_rock_monolith4", "8441.753906 370.095642 6533.851074", "-14.000003 0.000000 0.000000");
+SpawnObject("bldr_plnt_b_prunusSpinosa_2s", "8442.846680 374.774994 6538.368164", "0.000000 0.000000 0.000000");
+SpawnObject("bldr_plnt_t_BetulaPendula_2w", "8493.145508 313.588013 6143.472168", "0.000000 0.000000 -3.000000");
+SpawnObject("bldr_plnt_b_rosaCanina_2s", "8424.329102 369.548401 6557.569824", "-4.000000 -35.999992 0.000000");
+SpawnObject("bldr_plnt_b_naked_2s", "8419.685547 369.103699 6555.161133", "0.000000 0.000000 -15.000003");
+SpawnObject("bldr_plnt_b_corylusAvellana_1f", "8420.802734 368.844452 6549.315918", "0.000000 0.000000 0.000000");
+SpawnObject("bldr_plnt_b_corylusAvellana_1f", "8418.349609 359.804108 6535.038574", "0.000000 0.000000 -0.000000");
+SpawnObject("bldr_plnt_b_crataegusLaevigata_1s", "8417.220703 360.925903 6537.584961", "0.000000 0.000000 0.000000");
+SpawnObject("bldr_plnt_b_naked_2s", "8414.325195 361.426544 6544.277832", "0.000000 0.000000 0.000000");
+SpawnObject("bldr_plnt_b_crataegusLaevigata_1s", "8414.327148 361.126038 6546.452148", "0.000000 0.000000 0.000000");
+SpawnObject("bldr_plnt_b_corylusAvellana_2s", "8423.323242 360.473358 6527.176758", "0.000000 0.000000 0.000000");
+SpawnObject("bldr_plnt_t_BetulaPendula_2s", "8429.820313 362.713074 6505.570801", "0.000000 0.000000 -0.000000");
+SpawnObject("bldr_plnt_t_FagusSylvatica_1fc", "8437.645508 365.548248 6504.765137", "0.000000 0.000000 -0.000000");
+SpawnObject("bldr_plnt_t_FagusSylvatica_2sb", "8441.837891 363.156769 6506.416016", "0.000000 0.000000 -0.000000");
+SpawnObject("bldr_plnt_t_juglansRegia_3s", "8449.295898 364.246155 6514.533691", "0.000000 0.000000 -0.000000");
+SpawnObject("bldr_plnt_t_malusDomestica_3s", "8458.099609 363.282990 6530.162109", "0.000000 0.000000 -0.000000");
+SpawnObject("bldr_plnt_t_populusAlba_2s", "8454.206055 365.856995 6542.573730", "0.000000 0.000000 0.000000");
+SpawnObject("bldr_plnt_b_crataegusLaevigata_1s", "8423.975586 368.528900 6539.883789", "0.000000 0.000000 0.000000");
+SpawnObject("bldr_plnt_b_corylusAvellana_1f", "8420.877930 365.369354 6543.046387", "0.000000 0.000000 0.000000");
+SpawnObject("bldr_wall_indcnch_5", "8435.665039 402.478363 6535.940918", "1.000000 0.000000 0.000000");
+SpawnObject("Land_Castle_Bergfrit", "8434.931641 389.913300 6535.047363", "93.000031 0.000000 0.000000");
+SpawnObject("bldr_wall_indcnc_4", "8434.377930 400.393005 6533.667480", "-179.999985 0.000000 0.000000");
+SpawnObject("bldr_BusStation_roof_big", "8438.224609 409.017426 6533.847656", "-176.000000 0.000000 0.000000");
+SpawnObject("bldr_wall_wood2_5", "8426.099609 407.574615 6532.510742", "174.000015 -90.000000 -0.000009");
+SpawnObject("bldr_wall_wood2_5_end_2", "8429.616211 406.679779 6530.217285", "-90.000000 -45.999992 -1.000000");
