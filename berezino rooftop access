@@ -1,0 +1,23 @@
+//Spawn helper function
+void SpawnObject( string type, vector position, vector orientation )
+{
+    auto obj = GetGame().CreateObject( type, position );
+    obj.SetPosition( position );
+    obj.SetOrientation( orientation );
+    //Force collision update
+    vector roll = obj.GetOrientation();
+    roll [ 2 ] = roll [ 2 ] - 1;
+    obj.SetOrientation( roll );
+    roll [ 2 ] = roll [ 2 ] + 1;
+    obj.SetOrientation( roll );
+}
+
+//Your custom spawned objects
+SpawnObject("Land_Misc_Scaffolding", "12853.250977 9.574298 10034.778320", "-78.000000 0.000000 0.000000");
+SpawnObject("bldr_box_c_multi", "12854.130859 12.973383 10035.146484", "105.000000 0.000000 0.000000");
+SpawnObject("bldr_box_c", "12853.196289 13.323384 10035.292969", "0.000000 0.000000 0.000000");
+SpawnObject("Land_Ladder", "12853.075195 18.000000 10044.239258", "8.999950 -53.000008 -176.999969");
+SpawnObject("Land_Ladder", "12865.319336 18.000000 10051.608398", "111.999924 -74.000023 0.000000");
+SpawnObject("Land_Ladder", "12878.904297 0.000000 10083.830078", "113.999947 -86.000015 -4.000003");
+SpawnObject("bldr_sign_build_hotel", "12875.001953 15.200058 10083.315430", "0.000000 0.000000 0.000000");
+SpawnObject("Land_Ladder", "12878.247070 17.952814 10083.244141", "89.000015 -76.000008 -178.000031");
